@@ -1,17 +1,13 @@
 import Box from '@mui/material/Box';
-import { Icon, styled, SvgIconProps, Typography } from '@mui/material';
-
-interface InterestBoxProps {
-  title: string;
-  desc: string;
-  icon: React.ReactElement<SvgIconProps>;
-}
+import { styled, Typography } from '@mui/material';
+import InterestBoxProps from '../types/InterestBoxProps';
 
 const TitleTypography = styled(Typography)({
   fontFamily: 'Montserrat',
   cursor: 'default',
   padding: '10px',
   marginInline: 'auto',
+  textAlign: 'center',
 });
 
 const DescTypography = styled(Typography)({

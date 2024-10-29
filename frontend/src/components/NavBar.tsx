@@ -1,11 +1,9 @@
 import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
-import IconButton from '@mui/material/IconButton';
-import MenuIcon from '@mui/icons-material/Menu';
 import { styled } from '@mui/material';
+import { forwardRef } from 'react';
 
 const StyledToolbar = styled(Toolbar)({
   display: 'inline-flex',
@@ -40,9 +38,11 @@ const renderButtons = () => {
   return buttons;
 };
 
-function NavBar() {
+interface Props {}
+
+const NavBar = forwardRef<HTMLElement, Props>(function NavBar(props, ref) {
   return (
-    <AppBar position="fixed" sx={{ zIndex: 1 }}>
+    <AppBar ref={ref} position="fixed" sx={{ zIndex: 1 }}>
       <StyledToolbar>
         {/* <Box sx={{ marginRight: 'auto' }}>
           <StyledTypography>Killian Nolan - Data Scientist</StyledTypography>
@@ -51,6 +51,6 @@ function NavBar() {
       </StyledToolbar>
     </AppBar>
   );
-}
+});
 
 export default NavBar;
