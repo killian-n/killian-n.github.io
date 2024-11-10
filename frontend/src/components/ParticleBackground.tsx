@@ -2,6 +2,7 @@ import { type ISourceOptions } from '@tsparticles/engine';
 import Particles from '@tsparticles/react';
 import { type Container } from '@tsparticles/engine';
 import { useMemo } from 'react';
+import { IBackground } from '@tsparticles/engine';
 
 function ParticleBackground() {
   const particlesLoaded = async (container?: Container): Promise<void> => {
@@ -20,9 +21,9 @@ function ParticleBackground() {
         repeat: '',
         size: '100% 100%',
         opacity: 1,
-      },
+      } as IBackground,
       backgroundMask: {
-        composite: 'destination-out',
+        composite: 'destination-out' as GlobalCompositeOperation,
         cover: {
           color: {
             value: '#fff',
@@ -49,9 +50,9 @@ function ParticleBackground() {
             mode: 'push',
           },
           onDiv: {
-            selectors: {},
+            selectors: '',
             enable: false,
-            mode: {},
+            mode: '',
             type: 'circle',
           },
           onHover: {
@@ -95,7 +96,7 @@ function ParticleBackground() {
               distance: 200,
               duration: 0.4,
               mix: false,
-              selectors: {},
+              selectors: '',
             },
           },
           connect: {
@@ -135,7 +136,7 @@ function ParticleBackground() {
               speed: 1,
               maxSpeed: 50,
               easing: 'ease-out-quad',
-              selectors: {},
+              selectors: '',
             },
           },
           slow: {
@@ -229,9 +230,9 @@ function ParticleBackground() {
           close: true,
           fill: true,
           options: {},
-          type: {},
+          type: '',
         },
-        groups: [],
+        groups: {},
         move: {
           angle: {
             offset: 0,
