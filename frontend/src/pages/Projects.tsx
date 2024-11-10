@@ -1,4 +1,3 @@
-import NavBar from '../components/NavBar';
 import { Typography, Box, Stack, styled, Card, CardMedia } from '@mui/material';
 
 const BannerCard = styled(Card)({
