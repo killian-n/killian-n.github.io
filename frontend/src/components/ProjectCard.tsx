@@ -2,7 +2,7 @@ import { Card, CardContent, CardActions, CardMedia } from '@mui/material';
 import { forwardRef } from 'react';
 import ProjectCardProps from '../types/ProjectCardProps';
 
-const ProjectCard = forwardRef<HTMLElement, ProjectCardProps>(
+const ProjectCard = forwardRef<HTMLDivElement, ProjectCardProps>(
   function ProjectCard(props, ref) {
     return (
       <Card
@@ -12,6 +12,7 @@ const ProjectCard = forwardRef<HTMLElement, ProjectCardProps>(
           maxWidth: 'fit-content',
           minWidth: '30%',
         }}
+        ref={ref}
       >
         <CardMedia
           sx={{ maxWidth: '250px', marginTop: '10px', marginInline: 'auto' }}
