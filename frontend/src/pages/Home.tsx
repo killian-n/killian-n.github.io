@@ -151,7 +151,7 @@ function HomePage() {
           minWidth: '100vh',
         }}
       >
-        <ProjectSlider className="project-slider">
+        <ProjectSlider className="project-slider" onClick={() => {}} style={{}}>
           <ProjectCard img="banner.jpg">a</ProjectCard>
           <ProjectCard img="banner.jpg">b</ProjectCard>
           <ProjectCard img="banner.jpg">c</ProjectCard>
