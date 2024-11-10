@@ -1,6 +1,5 @@
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import { styled } from '@mui/material';
 import { forwardRef } from 'react';
@@ -16,8 +15,6 @@ const StyledButton = styled(Button)({
   color: 'black',
   textTransform: 'none',
 });
-
-const StyledTypography = styled(Typography)({});
 
 const buttonItems = {
   '/': 'Home',
@@ -40,7 +37,7 @@ const renderButtons = () => {
 
 interface Props {}
 
-const NavBar = forwardRef<HTMLElement, Props>(function NavBar(props, ref) {
+const NavBar = forwardRef<HTMLElement, Props>(function NavBar(_props, ref) {
   return (
     <AppBar ref={ref} position="fixed" sx={{ zIndex: 1 }}>
       <StyledToolbar>
