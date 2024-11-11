@@ -18,9 +18,9 @@ const StyledButton = styled(Button)({
 
 const buttonItems = {
   '/': 'Home',
-  '/About': 'About',
-  '/Protfolio': 'Protfolio',
-  '/Resume': 'Resume',
+  '/#/About': 'About',
+  '/#/Protfolio': 'Protfolio',
+  '/#/Resume': 'Resume',
 };
 
 const renderButtons = () => {
@@ -40,12 +40,7 @@ interface Props {}
 const NavBar = forwardRef<HTMLElement, Props>(function NavBar(_props, ref) {
   return (
     <AppBar ref={ref} position="fixed" sx={{ zIndex: 1 }}>
-      <StyledToolbar>
-        {/* <Box sx={{ marginRight: 'auto' }}>
-          <StyledTypography>Killian Nolan - Data Scientist</StyledTypography>
-        </Box> */}
-        {renderButtons()}
-      </StyledToolbar>
+      <StyledToolbar>{renderButtons()}</StyledToolbar>
     </AppBar>
   );
 });
