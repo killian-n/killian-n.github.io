@@ -9,7 +9,7 @@ import AboutPage from './pages/About';
 import { useEffect, useState, useRef } from 'react';
 import { initParticlesEngine } from '@tsparticles/react';
 import { loadSlim } from '@tsparticles/slim';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import { NavContext } from './components/NavContext';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -40,10 +40,10 @@ function App() {
             <NavContext.Provider value={navHeight}>
               <NavBar ref={navRef}></NavBar>
               <Routes>
-                <Route path="/" element={<HomePage></HomePage>} />
                 <Route path="/Projects" element={<ProjectsPage />} />
                 <Route path="/About" element={<AboutPage />} />
                 <Route path="/Resume" element={<ResumePage />} />
+                <Route path="/" element={<HomePage></HomePage>} />
               </Routes>
             </NavContext.Provider>
           </Router>
