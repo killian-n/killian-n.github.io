@@ -1,13 +1,16 @@
 import { type ISourceOptions } from '@tsparticles/engine';
 import Particles from '@tsparticles/react';
 import { type Container } from '@tsparticles/engine';
-import { useMemo } from 'react';
+import { useMemo, useCallback } from 'react';
 import { IBackground } from '@tsparticles/engine';
 
 function ParticleBackground() {
-  const particlesLoaded = async (container?: Container): Promise<void> => {
-    console.log(container);
-  };
+  const particlesLoaded = useCallback(
+    async (container?: Container): Promise<void> => {
+      console.log(container);
+    },
+    [],
+  );
 
   const options: ISourceOptions = useMemo(
     () => ({

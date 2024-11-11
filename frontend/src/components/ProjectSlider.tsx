@@ -25,6 +25,10 @@ const ProjectSlider = forwardRef<Slider, SliderProps>(function ProjectSlider(
     prevArrow: (
       <PrevArrow {...(props as ArrowProps)} />
     ) as React.ReactElement<ArrowProps>,
+    responsive: [
+      { breakpoint: 600, settings: { slidesToShow: 1, centerPadding: '40px' } },
+      { breakpoint: 900, settings: { slidesToShow: 1, centerPadding: '50px' } },
+    ],
   };
   return (
     <Slider {...settings} ref={ref}>

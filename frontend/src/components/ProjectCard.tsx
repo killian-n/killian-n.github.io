@@ -11,6 +11,7 @@ const ProjectCard = forwardRef<HTMLDivElement, ProjectCardProps>(
           marginInline: 'auto',
           maxWidth: 'fit-content',
           minWidth: '30%',
+          margin: '10px',
         }}
         ref={ref}
       >
