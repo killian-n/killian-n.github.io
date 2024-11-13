@@ -27,11 +27,15 @@ function App() {
 
   const [navHeight, setNavHeight] = useState(0);
   useEffect(() => {
-    if (navRef.current) {
-      setNavHeight(navRef.current.clientHeight);
-    }
-  });
-
+    const updateNavHeight = () => {
+      if (navRef.current) {
+        setNavHeight(navRef.current.clientHeight);
+      }
+    };
+    updateNavHeight();
+    window.addEventListener('resize', updateNavHeight);
+    return () => window.removeEventListener('resize', updateNavHeight);
+  }, []);
   if (init) {
     return (
       <>
@@ -40,7 +44,7 @@ function App() {
             <NavContext.Provider value={navHeight}>
               <NavBar ref={navRef}></NavBar>
               <Routes>
-                <Route path="/Projects" element={<ProjectsPage />} />
+                <Route path="/Portfolio" element={<ProjectsPage />} />
                 <Route path="/About" element={<AboutPage />} />
                 <Route path="/Resume" element={<ResumePage />} />
                 <Route path="/" element={<HomePage></HomePage>} />
