@@ -1,12 +1,12 @@
-import NavBar from '../components/NavBar';
-import React from 'react';
+import React, { useContext } from 'react';
 import { Typography, Button, Box } from '@mui/material';
+import { NavContext } from '../components/NavContext';
 
 function ProjectCounterPage() {
   const [projectCount, setProjectCount] = React.useState(0);
+  const navHeight = useContext(NavContext);
   return (
-    <>
-      <NavBar></NavBar>
+    <Box sx={{ marginTop: `${navHeight}px` }}>
       <Typography>
         We have completed {projectCount}{' '}
         {projectCount > 1 || projectCount == 0 ? 'projects' : 'project'} so far!
@@ -21,7 +21,7 @@ function ProjectCounterPage() {
           Click here
         </Button>
       </Box>
-    </>
+    </Box>
   );
 }
 
