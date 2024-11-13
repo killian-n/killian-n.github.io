@@ -36,34 +36,31 @@ function HomePage() {
   };
 
   return (
-    <>
+    <Box sx={{ marginTop: `${navHeight}px`, width: '100%' }}>
       <ParticleBackground></ParticleBackground>
-      <Box sx={{ position: 'absolute', left: '6%', top: '35%', zIndex: 2 }}>
-        <TitleTypography variant="h3">Killian Nolan</TitleTypography>
-        <TitleTypography variant="h4">Data Science Graduate</TitleTypography>
-      </Box>
-      <Box
-        sx={{
-          position: 'absolute',
-          right: '10%',
-          left: '40%',
-          top: '37%',
-          zIndex: 2,
-        }}
+      <Grid
+        container
+        spacing={2}
+        sx={{ position: 'absolute', top: '35%', zIndex: 2, width: '100%' }}
       >
-        <Typography sx={{ color: 'white' }}>
-          This is a test for a paragraph. dkaghdflkjgbvsdfkjgndf vldfjgbasdf
-          valdfjkv dfvnafd jkv dfnv sdflv djf vsdfjb ad;vkjhadflkvjb fv alk vlnm
-          valkdj vland valdv aldf vlm vlakdf vladnf vald vlad vjkanlv bladnf
-          badfj vladn vlaskdj vald valdv lajsdbvlkad vln lkj
-        </Typography>
-      </Box>
+        <Grid item xs={12} sm={12} md={4} lg={4} sx={{ marginLeft: '6%' }}>
+          <TitleTypography variant="h3">Killian Nolan</TitleTypography>
+          <TitleTypography variant="h4">Data Science Graduate</TitleTypography>
+        </Grid>
+        <Grid item xs={12} sm={12} md={4} lg={4} sx={{ marginLeft: '6%' }}>
+          <Typography sx={{ color: 'white' }}>
+            This is a test for a paragraph. dkaghdflkjgbvsdfkjgndf vldfjgbasdf
+            valdfjkv dfvnafd jkv dfnv sdflv djf vsdfjb ad;vkjhadflkvjb fv alk
+            vlnm valkdj vland valdv aldf vlm vlakdf vladnf vald vlad vjkanlv
+            bladnf badfj vladn vlaskdj vald valdv lajsdbvlkad vln lkj
+          </Typography>
+        </Grid>
+      </Grid>
       <DownArrow onClick={() => handleArrow(interestsRef)}>
         <ExpandMoreRoundedIcon fontSize="large"></ExpandMoreRoundedIcon>
       </DownArrow>
       <Box
         sx={{
-          minWidth: '100vh',
           alignContent: 'center',
         }}
         ref={interestsRef}
@@ -148,7 +145,7 @@ function HomePage() {
       </Box>
       <Box
         sx={{
-          minWidth: '100vh',
+          width: '100%',
         }}
       >
         <ProjectSlider className="project-slider" onClick={() => {}} style={{}}>
@@ -161,7 +158,7 @@ function HomePage() {
           <ProjectCard img="banner.jpg">g</ProjectCard>
         </ProjectSlider>
       </Box>
-    </>
+    </Box>
   );
 }
 
