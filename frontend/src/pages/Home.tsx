@@ -1,4 +1,4 @@
-import { Typography, Box, Grid } from '@mui/material';
+import { Typography, Box, Grid, Stack } from '@mui/material';
 import ParticleBackground from '../components/ParticleBackground';
 import ExpandMoreRoundedIcon from '@mui/icons-material/ExpandMoreRounded';
 import { styled } from '@mui/material';
@@ -9,6 +9,9 @@ import AssistantIcon from '@mui/icons-material/Assistant';
 import { NavContext } from '../components/NavContext';
 import ProjectCard from '../components/ProjectCard';
 import ProjectSlider from '../components/ProjectSlider';
+import SocialButton from '../components/SocialButton';
+import LinkedInIcon from '../assets/linkedin-brands-solid.svg';
+import GitHubIcon from '../assets/github-brands-solid.svg';
 
 const TitleTypography = styled(Typography)({
   color: 'white',
@@ -46,13 +49,28 @@ function HomePage() {
         <Grid item xs={12} sm={12} md={4} lg={4} sx={{ marginLeft: '6%' }}>
           <TitleTypography variant="h3">Killian Nolan</TitleTypography>
           <TitleTypography variant="h4">Data Science Graduate</TitleTypography>
+          <Stack direction="row">
+            <SocialButton
+              name="LinkedIn"
+              link="https://www.linkedin.com/in/killianbriannolan/"
+              icon={LinkedInIcon}
+            />
+            <SocialButton
+              name="GitHub"
+              link="https://github.com/killian-n"
+              icon={GitHubIcon}
+            />
+          </Stack>
         </Grid>
         <Grid item xs={12} sm={12} md={4} lg={4} sx={{ marginLeft: '6%' }}>
           <Typography sx={{ color: 'white' }}>
-            This is a test for a paragraph. dkaghdflkjgbvsdfkjgndf vldfjgbasdf
-            valdfjkv dfvnafd jkv dfnv sdflv djf vsdfjb ad;vkjhadflkvjb fv alk
-            vlnm valkdj vland valdv aldf vlm vlakdf vladnf vald vlad vjkanlv
-            bladnf badfj vladn vlaskdj vald valdv lajsdbvlkad vln lkj
+            I'm a recent graduate of Data Science & Analytics from University
+            College Cork. I'm looking forward to making an impact on the world
+            through my work, I believe that there is so much we could create by
+            utilising a data driven methodology. My main fields of interest are
+            financial markets, AI developments and silicon. I've spent the last
+            year travelling Australia working on myself and on personal projects
+            and am eager to contribute to your companies success.
           </Typography>
         </Grid>
       </Grid>
@@ -149,13 +167,22 @@ function HomePage() {
         }}
       >
         <ProjectSlider className="project-slider" onClick={() => {}} style={{}}>
-          <ProjectCard img="banner.jpg">a</ProjectCard>
-          <ProjectCard img="banner.jpg">b</ProjectCard>
-          <ProjectCard img="banner.jpg">c</ProjectCard>
-          <ProjectCard img="banner.jpg">d</ProjectCard>
-          <ProjectCard img="banner.jpg">e</ProjectCard>
-          <ProjectCard img="banner.jpg">f</ProjectCard>
-          <ProjectCard img="banner.jpg">g</ProjectCard>
+          <ProjectCard
+            title="This Website"
+            img="banner.jpg"
+            desc="While web development isn't a data science project I believe every
+            good developer should strive to understand how common systems on the
+            internet are built and work. Most data projects can benefit from an
+            interact webapp sitting in front of them, as well as many projects
+            require collecting data from the web. I built this website using
+            TypeScript and React."
+          />
+          <ProjectCard img="banner.jpg" title="b" desc="g" />
+          <ProjectCard img="banner.jpg" title="c" desc="g" />
+          <ProjectCard img="banner.jpg" title="d" desc="g" />
+          <ProjectCard img="banner.jpg" title="e" desc="g" />
+          <ProjectCard img="banner.jpg" title="f" desc="g" />
+          <ProjectCard img="banner.jpg" title="g" desc="g" />
         </ProjectSlider>
       </Box>
     </Box>
