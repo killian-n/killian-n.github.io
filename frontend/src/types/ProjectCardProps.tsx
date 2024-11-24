@@ -1,4 +1,5 @@
 export default interface ProjectCardProps {
-  children: React.ReactNode;
+  desc: string;
   img: string;
+  title: string;
 }
