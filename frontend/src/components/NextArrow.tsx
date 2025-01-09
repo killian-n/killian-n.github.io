@@ -8,7 +8,7 @@ export default function NextArrow(props: ArrowProps) {
       style={{
         ...style,
         display: 'block',
-        backgroundColor: 'blue',
+        color: 'red',
       }}
       onClick={onClick}
     />
