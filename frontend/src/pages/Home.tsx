@@ -168,21 +168,36 @@ function HomePage() {
       >
         <ProjectSlider className="project-slider" onClick={() => {}} style={{}}>
           <ProjectCard
-            title="This Website"
-            img="banner.jpg"
-            desc="While web development isn't a data science project I believe every
-            good developer should strive to understand how common systems on the
-            internet are built and work. Most data projects can benefit from an
-            interact webapp sitting in front of them, as well as many projects
-            require collecting data from the web. I built this website using
-            TypeScript and React."
+            title="Web Development"
+            img="web_dev.jpg"
+            desc="Understanding how information is handled and
+            presented on today's web is a critical skill for any developer. 
+            I used this project learn about frontend development in React. This project contains
+            the code for this very website and utilises many of the coding practices for creating 
+            a responsive and interactive website such as hooks, state updating, event-listeners, dynamic resizing and more.
+            "
+            link="https://github.com/killian-n/killian-n.github.io"
           />
-          <ProjectCard img="banner.jpg" title="b" desc="g" />
-          <ProjectCard img="banner.jpg" title="c" desc="g" />
-          <ProjectCard img="banner.jpg" title="d" desc="g" />
-          <ProjectCard img="banner.jpg" title="e" desc="g" />
-          <ProjectCard img="banner.jpg" title="f" desc="g" />
-          <ProjectCard img="banner.jpg" title="g" desc="g" />
+          <ProjectCard
+            img="cell_tower.jpg"
+            title="Multistage Deep Learning for Throughput Predition"
+            desc="Accurate throughput prediction is an important component of many of today's communication systems
+                  such as video streaming or the scheduling of large downloads. Today we 
+                  heavily utilise wireless communication technologies such as 4G or 5G for such applications,
+                  however throughput prediction for wireless systems presents a unique challenge for
+                  application designers due to the highly dynamic nature of wireless networks."
+            link="https://github.com/killian-n/FYP-Multistage-Throughput-Predictor"
+          />
+          <ProjectCard
+            img="cancer.jpg"
+            title="Thyroid Cancer Reoccurance Notebook"
+            desc="In this notebook I use a dataset sourced from Kaggle and run through the process of exploring
+            a dataset and preparing it for use in prediction models. I use explore topics such as data understanding,
+            missing values, feature distributions, feature correlations, class imbalance and more. I utilise this
+            analysis to inform model choice then build a cross validation test framework to compare model performance.
+            This project is built in python with libraries such as scikit-learn, pandas, PyTorch and numpy."
+            link="https://github.com/killian-n/ThyroidCancerPred"
+          />
         </ProjectSlider>
       </Box>
     </Box>
