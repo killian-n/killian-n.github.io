@@ -18,8 +18,6 @@ const StyledButton = styled(Button)({
 
 const buttonItems = {
   '/': 'Home',
-  '/#/About': 'About',
-  '/#/Portfolio': 'Portfolio',
   '/#/Resume': 'Resume',
 };
 
