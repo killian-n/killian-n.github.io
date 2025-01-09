@@ -4,6 +4,7 @@ import {
   CardActions,
   CardMedia,
   Typography,
+  Button,
 } from '@mui/material';
 import { forwardRef } from 'react';
 import ProjectCardProps from '../types/ProjectCardProps';
@@ -37,14 +38,23 @@ const ProjectCard = forwardRef<HTMLDivElement, ProjectCardProps>(
         />
         <CardContent sx={{ width: '100%' }}>
           <Typography
-            variant="h4"
-            sx={{ textAlign: 'center', fontFamily: 'Montserrat' }}
+            variant="h6"
+            sx={{ textAlign: 'center', fontFamily: 'Roboto' }}
           >
             {props.title}
           </Typography>
           <Typography sx={{ marginInline: '10px' }}>{props.desc}</Typography>
         </CardContent>
-        <CardActions sx={{ justifyContent: 'center' }}></CardActions>
+        <CardActions sx={{ justifyContent: 'center' }}>
+          <Button
+            color="secondary"
+            sx={{ display: 'flex', textTransform: 'none' }}
+            href={props.link}
+            variant="contained"
+          >
+            View Project
+          </Button>
+        </CardActions>
       </Card>
     );
   },
