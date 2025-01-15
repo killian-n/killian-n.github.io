@@ -70,7 +70,7 @@ function HomePage() {
             utilising a data driven methodology. My main fields of interest are
             financial markets, AI developments and silicon. I've spent the last
             year travelling Australia working on myself and on personal projects
-            and am eager to contribute to your companies success.
+            and I am eager to contribute to your company's success.
           </Typography>
         </Grid>
       </Grid>
